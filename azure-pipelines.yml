@@ -14,13 +14,14 @@ jobs:
     steps:
       - powershell: |
           $b = "http://www.bing.com"
-          Write-Host "##vso[task.setvariable variable=valuefiles;isOutput=true]$b"
+          Write-Host "##vso[task.setvariable variable=t1;isOutput=true]$b"
         name: power
   - job: jobB
     dependsOn: ['jobA']
+    variables:
+      var1: $[ dependencies.jobA.outputs['power.t1'] ]
     steps:
       - powershell: |
-          $va1 = $[dependencies.jobA.outputs['power.valuefiles']
-          Write-Host "output: $va1"
+          Write-Host "output: $(va1)"
 
 
