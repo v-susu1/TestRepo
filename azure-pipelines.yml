@@ -18,7 +18,7 @@ jobs:
   - job: jobB
     dependsOn: ['jobA']
     variables:
-      var1: $[ dependencies.jobA.outputs['setvariable.t1'] ]
+      var1: $[ dependencies.jobA.outputs['t1'] ]
     steps:
       - powershell: |
           Write-Host "output: $(var1)"
