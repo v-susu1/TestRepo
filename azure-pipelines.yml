@@ -20,7 +20,7 @@ jobs:
     dependsOn: ['jobA']
     steps:
       - powershell: |
-          $va1 = $[dependencies.A.outputs['power.valuefiles']
+          $va1 = $[dependencies.jobA.outputs['power.valuefiles']
           Write-Host "output: $va1"
 
 
