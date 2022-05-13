@@ -22,6 +22,6 @@ jobs:
       var1: $[ dependencies.jobA.outputs['setVariable.t1'] ]
     steps:
       - powershell: |
-          Write-Host "output: $(va1)"
+          Write-Host "output: $(var1)"
 
 
