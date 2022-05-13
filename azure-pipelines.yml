@@ -22,7 +22,7 @@ jobs:
       var1: $[ dependencies.jobA.outputs['power.t1'] ]
     steps:
       - powershell: |
-          $t1 = $[dependencies.jobA.outputs['power.t1']]
+          $t1 = $[ dependencies.jobA.outputs['power.t1'] ]
           Write-Host "output1: $t1"
           Write-Host "output: $(var1)"
 
