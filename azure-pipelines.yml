@@ -32,6 +32,7 @@ jobs:
     steps:
       - task: PowerShell@2
         displayName: run powershell file
+        name: job2output
         timeoutInMinutes: 30
         inputs:
           filePath: test1.ps1
