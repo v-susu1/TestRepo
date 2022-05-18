@@ -16,4 +16,5 @@ if($step -eq '1'){
 	
 	$t3Url = "http://www.google.com"
 	Write-Host ("##vso[task.setvariable variable=t3;]$t3Url")
+	Write-Host "Compare Url: $t3Url"
 }
