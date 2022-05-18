@@ -48,6 +48,6 @@ jobs:
           script: >-
             Write-Host "output p1(t1): $(p1)"
             Write-Host "output p2(t2): $(p2)"
-            Write-Host "output t3: $Env:t3"
+            Write-Host "Compare Url: $Env:t3"
 
 
