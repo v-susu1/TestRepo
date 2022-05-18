@@ -1,5 +1,5 @@
 param (
-	[string]$step,
+    [string]$step,
     [string]$p1
 )
 
@@ -10,5 +10,5 @@ if($step -eq '1'){
 	
 } else {
 	Write-Host "Pass parameter p1=$p1"
-	Write-Host "Pass parameter p1=$Env:t2"
+	Write-Host "Pass parameter p2=$Env:t2"
 }
