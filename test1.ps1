@@ -14,6 +14,6 @@ if($step -eq '1'){
 	Write-Host "Pass parameter p1 = $p1"
 	Write-Host "Pass parameter p2 = $Env:t2"
 	
-	$url = "http://www.google.com"
-	Write-Host ("##vso[task.setvariable variable=t3;]$url")
+	$t3Url = "http://www.google.com"
+	Write-Host ("##vso[task.setvariable variable=t3;]$t3Url")
 }
