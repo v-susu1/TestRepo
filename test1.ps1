@@ -3,6 +3,8 @@ param (
     [string]$p1
 )
 
+Write-Host "Args: -step $step -p1 $p1"
+
 if($step -eq '1'){
 
 	$b = "http://www.baidu.com"
