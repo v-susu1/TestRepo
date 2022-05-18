@@ -27,12 +27,12 @@ jobs:
   - job: jobB
     dependsOn: ['jobA']
     variables:
-      p1: $[ dependencies.jobA.outputs['jobAOutput1.t1'] ],
+      p1: $[ dependencies.jobA.outputs['jobAOutput1.t1'] ]
       p2: $[ dependencies.jobA.outputs['jobAOutput2.t2'] ]
     steps:
       - powershell: |
-          Write-Host "output: $(p1)"
-          Write-Host "output: $(p2)"
+          Write-Host "output p1(t1): $(p1)"
+          Write-Host "output p2(t2): $(p2)"
       - task: PowerShell@2
         displayName: run powershell file
         timeoutInMinutes: 30
