@@ -16,6 +16,7 @@ jobs:
           $b = "http://www.bing.com"
           Write-Host "##vso[task.setvariable variable=t1;isOutput=true]$b"
         name: jobAOutput1
+        displayName: set variable inline
       - task: PowerShell@2
         displayName: run powershell file
         timeoutInMinutes: 30
